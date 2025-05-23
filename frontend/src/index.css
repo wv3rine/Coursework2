@@ -1,0 +1,167 @@
+:root {
+  --primary-bg: #fdf6ec;   /* светло-бежевый фон */
+  --card-bg: #ffffff;
+  --accent-blue: #007bff;
+  --border: #e0d9cc;
+  --text: #333;
+  --meta: #888;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text);
+}
+
+nav {
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-left a,
+.nav-right a {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--accent-blue);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-left a.primary,
+.nav-right a.primary {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.nav-left a.secondary,
+.nav-right a.secondary {
+  background-color: white;
+  color: var(--accent-blue);
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.post {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.post h3 {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.post p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  white-space: pre-line; /* для отображения стихов */
+}
+
+.post-meta {
+  color: var(--meta);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button, .btn {
+  background-color: var(--accent-blue);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #005dc1;
+}
+
+.button-secondary {
+  background-color: white;
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-secondary:hover {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #bb2d3b;
+}
