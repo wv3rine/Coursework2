@@ -19,14 +19,14 @@ export default function SignUp() {
       return
     }
     try {
-      const { login: saveUser } = useAuth()
+      // const { login: saveUser } = useAuth()
 
       await api.post('/user/sign_up', {
         login: form.login,
         password: form.password,
         role: 'user'
       })
-      saveUser()
+      // saveUser()
       navigate('/posts')
     } catch (err) {
       setError('Ошибка регистрации')

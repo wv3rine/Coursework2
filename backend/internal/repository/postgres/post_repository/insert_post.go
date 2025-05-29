@@ -19,7 +19,7 @@ type InsertPostReq struct {
 
 func (r *PostRepo) InsertPost(ctx context.Context, post InsertPostReq) (int64, error) {
 	query, args, err := squirrel.Insert(user_quieries.PostTable).
-		Columns(user_quieries.InsertUserColumns...).
+		Columns(user_quieries.InsertPostColumns...).
 		Values(
 			post.Name,
 			post.Author,
